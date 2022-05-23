@@ -1,0 +1,12 @@
+[
+ {
+     "appname": "products-photo",
+     "source" : "/content/sample_data",
+     "historicalsnap" : true,
+     "destination" : [{
+              "cloud"  : "Dropbox"
+                     }]
+ }
+
+
+]
