@@ -1,0 +1,19 @@
+version: "3"
+services:
+  dev-server:
+    container_name: mysql
+    image : renzvos.jfrog.io/mysql-host/production
+    ports : 
+      - 3306:3306
+      - 33060:33060
+      - 33061:33061
+    env_file:
+      - config.env
+    environment:
+     - PYTHONUNBUFFERED=1
+     - config_mysql_type=default
+     - startup_restore_data=true
+    volumes:
+      - ./volume:/volume
+    init: true
+
